@@ -7,20 +7,15 @@ import {OrderList, OrderForm} from './components/Order';
 
 function App() {
   let [isOptionSelected, setIsOptionSelected] = useState(false);
+
   return (
     <div className="App">
       <Nav isSelected={isOptionSelected} setIsSelected={setIsOptionSelected}></Nav>
-      {
-        isOptionSelected ? 
-        <>
-        <div>보여줄거</div> 
-        <Routes>
-          <Route path='/order' element={ <OrderList></OrderList>}></Route> {/* /order 페이지 들어가면  orderList 보여주기*/}
-          <Route path='/delivery'></Route>
-        </Routes>
-        </>
-        : null
-      }
+      <Routes>
+        <Route path='/' element={<OrderList></OrderList>}></Route>
+        <Route path='/order' element={<OrderForm></OrderForm> }></Route>
+        <Route path='/delivery'></Route>
+      </Routes>
       
     </div>
   );
