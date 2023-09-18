@@ -1,23 +1,38 @@
 import {useEffect} from 'react';
+const {kakao} = window;
 
 function OrderList(){
-    
     return(
         <div className="order-list">
-            <p>보여줄거</p>
+            <div className='order-bar'>
+                <p>주문 리스트</p>
+                <button onClick={()=>{
+                    window.location.href = '/order';
+                }}>주문하기</button>
+            </div>
         </div>
     );
 }
-function OrderForm(){
+function OrderMap() {
     useEffect(()=>{
-        const mapScriptTag = document.createElement('script');
-        mapScriptTag.src = "//dapi.kakao.com/v2/maps/sdk.js?appkey=54ee9989a4bb5b14eab732e07bd561cc"
-        mapScriptTag.async = true;
-        document.appendChild(mapScriptTag);
-    });
+        const container = document.getElementById('map');
+        const options = {
+            center: new kakao.maps.LatLng(36.109355184080215,129.34310443220502),
+            level:3
+        };
+        const map = new kakao.maps.Map(container, options);
+    }, []);
+    return(
+        <div id='map' style={{
+            width:'90%',
+            height:'300px'
+        }}></div>
+    );
+}
+function OrderForm(){
     return(
         <>
-        <div id='map'></div>
+        <OrderMap></OrderMap>
         </>
     );
 }
