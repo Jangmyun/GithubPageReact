@@ -1,3 +1,91 @@
+@font-face {
+  font-family: 'iceSotong-Rg';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/iceSotong-Rg.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
 .App {
   text-align: center;
 }
+
+
+/* --------------------- */
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #eee;
+}
+
+/* Header Logo */
+.header-logo {
+  flex: 4;
+  margin: 10px;
+}
+.header-logo h1 {
+  font-family: 'iceSotong-Rg';
+  margin: 0;
+  text-align: left;
+}
+/* Header logo span tags */
+#logo-span-0 {
+  font-size: 30px;
+  color: #1e9490;
+}
+#logo-span-1 {
+  font-size: 20px;
+  margin: 0 3px;
+  color: #2ABAB6;
+}
+#logo-span-2 {
+  font-size: 30px;
+  color: #1e9490;
+}
+/* Header logo p tag */
+.header-logo p {
+  margin: 0;
+  font-size: 12px;
+  text-align: left;
+  color: #6f6f6f;
+}
+/* ------------------- */
+/* NavBar */
+/* Header profile img */
+.navbar {
+  display: flex;
+  flex:1;
+}
+.header-profile {
+  width: 3rem;
+}
+.header-profile img {
+  border-radius: 20px;
+}
+
+.navbar-btn {
+  display: flex;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+.navbar-check-btn {
+  margin: auto;
+}
+#navbar-check {
+  display: none;
+}
+
+
