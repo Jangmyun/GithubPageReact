@@ -1,0 +1,7 @@
+.sidenav {
+    position: absolute;
+    border-top: 1px;
+    margin-top: 73px;
+    width: 100vw;
+    height: 100vh;
+}
