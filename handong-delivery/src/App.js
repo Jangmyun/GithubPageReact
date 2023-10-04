@@ -16,4 +16,14 @@ function App() {
   );
 }
 
+function Btn(){
+  return (
+    <div className='increase Button'>
+      <button>Increase</button>
+      <button>Decrease</button>
+      <p>{}</p>
+    </div>
+  )
+}
+
 export default App;
